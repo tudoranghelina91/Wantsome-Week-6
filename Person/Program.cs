@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Persons.Classes;
+using Persons.Structs;
 
 namespace Persons
 {
@@ -11,8 +8,11 @@ namespace Persons
     {
         static void Main(string[] args)
         {
-            Person gogu = new Person("Gogu");
-            Person vasile = new Person("Vasile", 21);
+            foreach (Person person in PeopleStruct.People)
+            {
+                Console.WriteLine(person.ToString());
+            }
+            Console.ReadKey();
         }
     }
 }
