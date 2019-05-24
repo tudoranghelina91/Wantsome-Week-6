@@ -20,6 +20,11 @@ namespace Students.Classes
 
         private static Random randomDigit = new Random();
 
+        public Student()
+        {
+
+        }
+
         public Student(string firstName, string lastName, 
             Universities.Course course, 
             Universities.Specialty specialty, 

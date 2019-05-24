@@ -8,17 +8,36 @@ namespace Students
     {
         static void Main(string[] args)
         {
-            foreach (Student student in MyStudents.studentArr)
+            Student[] STUDENTS = MyStudents.studentArr;
+
+            foreach (Student student in STUDENTS)
             {
-                Console.WriteLine(student.ToString());
+                Console.WriteLine(student);
             }
 
-            for (int i = 0; i < MyStudents.studentArr.Length - 1; i++)
-                for (int j = i + 1; j < MyStudents.studentArr.Length; j++)
-                    if (MyStudents.studentArr[i] == MyStudents.studentArr[j])
-                        Console.WriteLine($"{MyStudents.studentArr[i].FirstName} is equal to {MyStudents.studentArr[j].FirstName}");
+            for (int i = 0; i < STUDENTS.Length - 1; i++)
+                for (int j = i + 1; j < STUDENTS.Length; j++)
+                    if (STUDENTS[i] == STUDENTS[j])
+                        Console.WriteLine($"{STUDENTS[i].FirstName} is equal to {STUDENTS[j].FirstName}");
                     else
-                        Console.WriteLine($"{MyStudents.studentArr[i].FirstName} is not equal to {MyStudents.studentArr[j].FirstName}");
+                        Console.WriteLine($"{STUDENTS[i].FirstName} is not equal to {STUDENTS[j].FirstName}");
+
+            Console.WriteLine();
+
+            for (int i = 0; i < STUDENTS.Length - 1; i++)
+                for (int j = i + 1; j < STUDENTS.Length; j++)
+                    if (STUDENTS[i].CompareTo(STUDENTS[j]) > 0)
+                    {
+                        Student dummyStudent = (STUDENTS[i].Clone() as Student);
+                        STUDENTS[i] = (STUDENTS[j].Clone() as Student);
+                        STUDENTS[j] = (dummyStudent.Clone() as Student);
+                    }
+
+            Console.WriteLine("Students after ordering them: ");
+            foreach (Student student in STUDENTS)
+            {
+                Console.WriteLine(student);
+            }
 
 
             Console.ReadKey();
