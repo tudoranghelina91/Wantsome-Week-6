@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wantsome-Week-6", "Wantsome
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OverrideSystemObject", "..\OverrideSystemObject\OverrideSystemObject.csproj", "{6E04485D-6893-473C-B1EF-6578D32F83FD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Students", "..\Students\Students.csproj", "{EB5E600E-8E44-4823-8ADC-0E8B44A19C4F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{6E04485D-6893-473C-B1EF-6578D32F83FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6E04485D-6893-473C-B1EF-6578D32F83FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6E04485D-6893-473C-B1EF-6578D32F83FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB5E600E-8E44-4823-8ADC-0E8B44A19C4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB5E600E-8E44-4823-8ADC-0E8B44A19C4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB5E600E-8E44-4823-8ADC-0E8B44A19C4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB5E600E-8E44-4823-8ADC-0E8B44A19C4F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
