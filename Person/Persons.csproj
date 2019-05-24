@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{EB5E600E-8E44-4823-8ADC-0E8B44A19C4F}</ProjectGuid>
+    <ProjectGuid>{62AEC17B-5134-46FA-B65F-399577F02D7B}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Students</RootNamespace>
-    <AssemblyName>Students</AssemblyName>
+    <RootNamespace>Persons</RootNamespace>
+    <AssemblyName>Persons</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,15 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Structs\MyStudents.cs" />
-    <Compile Include="Classes\Student.cs" />
+    <Compile Include="Classes\Person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Structs\UniSpecCourse.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

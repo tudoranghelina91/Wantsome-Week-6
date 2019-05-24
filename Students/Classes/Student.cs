@@ -7,7 +7,7 @@ using Students.Structs;
 
 namespace Students.Classes
 {
-    class Student : ICloneable, IComparable
+    class Student : ICloneable, IComparable<Student>
     {
         public string FirstName { get; }
         public string MiddleName { get; }
@@ -20,6 +20,8 @@ namespace Students.Classes
         public Universities.University University { get; }
         public Universities.Faculty Faculty { get; }
         public int SSN { get; set; }
+
+        private static Random randomDigit = new Random();
 
         public Student(string firstName, string lastName, 
             Universities.Course course, 
@@ -40,7 +42,7 @@ namespace Students.Classes
 
         public override bool Equals(object obj)
         {
-            if (SSN == (obj as Student).SSN)
+            if (CompareTo(obj as Student) == 0)
                 return true;
 
             return false;
@@ -48,13 +50,12 @@ namespace Students.Classes
 
         public override int GetHashCode()
         {
-            Random randomDigit = new Random();
-            
             int ssn = 0;
 
+            
             for (int i = 1; i <= 9; i++)
             {
-                ssn = ssn * 10 + randomDigit.Next(0, 9);
+                ssn = ssn * 10 + (randomDigit.Next(0, 9));
             }
 
             return ssn;
@@ -62,7 +63,7 @@ namespace Students.Classes
 
         public static bool operator == (Student firstStudent, Student secondStudent)
         {
-            if (firstStudent.SSN == secondStudent.SSN)
+            if (firstStudent.CompareTo(secondStudent) == 0)
                 return true;
 
             return false;
@@ -70,7 +71,7 @@ namespace Students.Classes
 
         public static bool operator != (Student firstStudent, Student secondStudent)
         {
-            if (firstStudent.SSN != secondStudent.SSN)
+            if (firstStudent.CompareTo(secondStudent) != 0)
                 return true;
 
             return false;
@@ -103,13 +104,26 @@ namespace Students.Classes
             studentClone.Address = Address;
             studentClone.Mobile = Mobile;
             studentClone.Email = Email;
+            studentClone.SSN = SSN;
 
             return studentClone;
         }
 
-        public int CompareTo(object obj)
+        public int CompareTo(Student student)
         {
-            throw new NotImplementedException();
+            int c = 0;
+
+            c += string.Compare(FirstName, student.FirstName);
+            c += string.Compare(LastName, student.LastName);
+            c += string.Compare(MiddleName, student.MiddleName);
+
+            if (SSN > student.SSN)
+                c++;
+
+            else if (SSN < student.SSN)
+                c--;
+
+            return c;
         }
     }
 }
