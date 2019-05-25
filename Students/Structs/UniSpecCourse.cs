@@ -1,6 +1,6 @@
 ﻿namespace Students.Structs
 {
-    struct Universities
+    public struct Universities
     {
         public enum Course
         {

@@ -4,7 +4,7 @@ using Students.Structs;
 
 namespace Students.Classes
 {
-    class Student : ICloneable, IComparable<Student>
+    public class Student : ICloneable, IComparable<Student>
     {
         public string FirstName { get; }
         public string MiddleName { get; }
