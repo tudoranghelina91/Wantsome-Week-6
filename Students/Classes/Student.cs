@@ -16,7 +16,7 @@ namespace Students.Classes
         private Universities.Specialty Specialty { get; }
         private Universities.University University { get; }
         private Universities.Faculty Faculty { get; }
-        private int SSN { get; }
+        private int SSN { get; set; }
 
         private static Random randomDigit = new Random();
 
