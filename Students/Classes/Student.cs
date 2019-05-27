@@ -12,11 +12,11 @@ namespace Students.Classes
         public string Address { get; set; }
         public string Mobile { get; set; }
         public string Email { get; set; }
-        private Universities.Course Course { get; set; }
+        private Universities.Course Course { get; }
         private Universities.Specialty Specialty { get; }
         private Universities.University University { get; }
         private Universities.Faculty Faculty { get; }
-        private int SSN { get; set; }
+        private int SSN { get; }
 
         private static Random randomDigit = new Random();
 
